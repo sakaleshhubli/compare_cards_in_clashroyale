@@ -1,25 +1,63 @@
-# Project Title
+# Clash Royale Card Explorer
 
-## About the Project
+## About
 
-[//]: # (This is where you would describe your project.)
+A Flask web application that fetches Clash Royale card data from the official API and lets users compare 2-8 cards side by side.
 
-## Getting Started
+## Features
 
-[//]: # (This is where you would provide instructions on how to get a copy of the project up and running on your local machine for development and testing purposes.)
+- Real-time card data from Clash Royale API
+- Compare key stats: elixir cost, rarity, type, and descriptions
+- Simple checkbox selection interface
+- Lightweight and fast
 
-### Prerequisites
+## Installation
 
-[//]: # (This is where you would list things you need to install the software and how to install them.)
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repo.git
+   cd your-repo
+   ```
 
-### Installation
+2. Set up Python environment:
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate  # Windows: venv\Scripts\activate
+   pip install flask
+   ```
 
-[//]: # (This is where you would provide a step-by-step series of examples that tell you how to get a development environment running.)
+3. Add your API key:
+   - Create `mykey.txt` in the root directory
+   - Paste your Clash Royale API token (no whitespace)
+
+4. Run the app:
+   ```bash
+   python app.py
+   ```
+   Access at: `http://127.0.0.1:5000/`
 
 ## Usage
 
-[//]: # (This is where you would provide examples of how to use your project.)
+1. Open the app in your browser
+2. Select 2-8 cards using checkboxes
+3. Click "Compare Selected Cards" to view:
+   - Card images
+   - Elixir costs
+   - Rarities
+   - Types
+   - Descriptions
+
+## How It Works
+
+- Fetches card data from Clash Royale API on startup
+- Stores data in memory for quick access
+- Uses Flask templates for the web interface
+- Simple checkbox-based selection system
 
 ## Contributing
 
-[//]: # (This is where you would explain how others can contribute to your project.)
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/NewFeature`)
+3. Commit changes (`git commit -m 'Add new feature'`)
+4. Push to branch (`git push origin feature/NewFeature`)
+5. Open a Pull Request
